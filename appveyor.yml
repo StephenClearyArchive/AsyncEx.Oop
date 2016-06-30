@@ -1,0 +1,20 @@
+version: '{build}'
+os: Visual Studio 2015
+configuration: Debug
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: hUF1oV9rs0mn3FFcHYFLa7cHvNWDzgGHShSAtH0EoVvxv736GMRmko1H3WE5Xb3q
+install:
+- ps: >-
+    nuget update -self
+
+    Invoke-WebRequest "https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0-preview2/scripts/obtain/dotnet-install.ps1" -OutFile ".\dotnet-install.ps1"
+
+    $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetcli"
+
+    & .\dotnet-install.ps1 -Channel "preview" -Version "1.0.0-preview2-003121" -InstallDir "$env:DOTNET_INSTALL_DIR"
+
+build: off
+test_script:
+- ps: dotnet restore
+- ps: ./Coverage.ps1
