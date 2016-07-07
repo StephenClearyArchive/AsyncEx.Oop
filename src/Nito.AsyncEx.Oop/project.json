@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.0-delta-1",
+  "version": "1.0.0-delta-2",
   "description": "Interfaces and utility methods for combining async with OOP.",
   "authors": [ "Stephen Cleary" ],
   "buildOptions": {
@@ -9,6 +9,6 @@
     "netstandard1.3": { }
   },
   "dependencies": {
-    "Nito.AsyncEx.Coordination": "1.0.0-delta-3"
+    "Nito.AsyncEx.Coordination": "1.0.0-delta-7"
   }
 }
