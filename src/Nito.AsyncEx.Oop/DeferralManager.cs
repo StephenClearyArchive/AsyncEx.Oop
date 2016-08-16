@@ -107,7 +107,7 @@ namespace Nito.AsyncEx
             /// <summary>
             /// A deferral.
             /// </summary>
-            private sealed class Deferral : SingleDisposable<DeferralManager>
+            private sealed class Deferral : Disposables.SingleDisposable<DeferralManager>
             {
                 public Deferral(DeferralManager manager)
                     : base(manager)
