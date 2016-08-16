@@ -19,6 +19,6 @@
     "netstandard1.3": {}
   },
   "dependencies": {
-    "Nito.AsyncEx.Coordination": "1.0.0-eta-01"
+    "Nito.AsyncEx.Coordination": "1.0.1"
   }
 }

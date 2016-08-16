@@ -107,26 +107,16 @@ namespace Nito.AsyncEx
             /// <summary>
             /// A deferral.
             /// </summary>
-            private sealed class Deferral : IDisposable
+            private sealed class Deferral : SingleDisposable<DeferralManager>
             {
-                /// <summary>
-                /// The deferral manager in charge of this deferral.
-                /// </summary>
-                private DeferralManager _manager;
-
                 public Deferral(DeferralManager manager)
+                    : base(manager)
                 {
-                    _manager = manager;
                 }
 
-                /// <summary>
-                /// Completes the deferral.
-                /// </summary>
-                void IDisposable.Dispose()
+                protected override void Dispose(DeferralManager context)
                 {
-                    if (_manager != null)
-                        _manager.DecrementCount();
-                    _manager = null;
+                    context.DecrementCount();
                 }
             }
         }
