@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.0-eta-01",
+  "version": "1.0.0",
   "description": "Interfaces and utility methods for combining async with OOP.",
   "authors": [ "Stephen Cleary" ],
   "buildOptions": {
