@@ -1,4 +1,4 @@
-# AsyncEx.Oop [![AppVeyor](https://img.shields.io/appveyor/ci/StephenCleary/AsyncEx-Oop.svg?style=plastic)](https://ci.appveyor.com/project/StephenCleary/AsyncEx-Oop) [![Coveralls](https://img.shields.io/coveralls/StephenCleary/AsyncEx.Oop.svg?style=plastic)](https://coveralls.io/r/StephenCleary/AsyncEx.Oop)
+# AsyncEx.Oop
 
 Interfaces and utility methods for combining async with OOP.
 
